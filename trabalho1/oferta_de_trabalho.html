@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title> Oferta de Trabalho </title>
+
+</head>
+
+
+<body>
+
+    <form action="Vagas.php" method="post" enctype="application/x-www-form-urlencoded">
+        
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+        </div>
+        <div>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" placeholder="Idade" required>
+        </div>
+
+        <div>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(Só numeros)" pattern="[0-9]{12}" required>
+        </div>
+
+        <div>
+            <label for="data">Data de nascimento:</label>
+            <input type="date" id="data" name="data">
+        </div>
+
+        <div>
+
+            <select name="Sexo">
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="" selected>Não declarar sexo</option>
+            </select>
+        </div>
+        <div>
+
+            <select name="estadocivil">
+                <option value="casado(a)">Casado</option>
+                <option value="colteiro(a)">Solteiro</option>
+                <option value="Divorciado(a)">Divorciado</option>
+                <option value="" selected>Estado Civil</option>
+            </select>
+        </div>
+
+        
+        <div>
+            <label for="cnpj">Cnpj:</label>
+            <input type="number" id="cnpj" name="cnpj" placeholder="Digite o cnpj" required>
+        </div>
+
+        <div>
+            <label for="razao">Razão Social:</label>
+            <input type="text" id="razao" name="razao" placeholder="Digite a razão social">
+        </div>
+
+        <div>
+            <label for="ramo">Ramo de atuação:</label>
+            <input type="text" id="ramo" name="ramo" placeholder="Digite o ramo de atuação">
+        </div>
+
+      
+        <div>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" placeholder="(Só numeros)" pattern="[0-9]{8}" required>
+        </div>
+        <div>
+
+            <select name="logradouro">
+                <option value="rua">rua</option>
+                <option value="avenida">avenida</option>
+                <option value="praca">praça</option>
+                <option value="outro">outro</option>
+                <option value="" selected>Tipo de logradouro</option>
+            </select>
+        </div>
+        <div>
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" id="logradouro" name="logradouro" placeholder="Digite o Logradouro" required>
+        </div>
+        <div>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
+        </div>
+        <div>
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="cep" placeholder="Digite o Estado" required>
+        </div>
+
+        <div>
+            <textarea name="interesse" rows="10" cols="30">Descrição detalhada do interesse
+          
+            </textarea>
+        </div>
+
+        <fieldset>
+            <legend>Salário</legend>
+
+            <input type="radio" name="salario" value="1000">até R$5000
+            <input type="radio" name="salario" value="2000">entre R$5000 e R$6000
+            <input type="radio" name="salario" value="3000">entre R$7000 e R$8000
+            <input type="radio" name="salario" value="3000">mais de R$8000
+        </fieldset>
+
+        <fieldset>
+            <legend>nível de inglês exigido </legend>
+
+            <input type="radio" name="ingles" value="basico">basico
+            <input type="radio" name="ingles" value="intermediario">intermediário
+            <input type="radio" name="ingles" value="avancado">avançado
+        </fieldset>
+
+        <fieldset>
+            <legend>tempo de trabalho</legend> 
+            
+            <input type="radio" name="horas" value="6horas">até 6horas diarias
+            <input type="radio" name="horas" value="2000">entre 6 e 7 horas diarias 
+            <input type="radio" name="horas" value="3000"> 8 horas diarias 
+            <input type="radio" name="horas" value="3000">mais de 8 horas diarias
+        </fieldset>
+
+        
+
+        <fieldset>
+            <legend> Habilidades que são necessárias </legend> 
+            <div>
+                <input type="checkbox" id="proatividade" name="habilidades[]" value="proatividade">
+                <label for="proatividade"> </label>Proatividade
+            </div>
+            <div>
+                <input type="checkbox" id="boacomunicação" name="Habilidades[]" value="boacomunicação">
+                <label for="boacomunicação"> </label>Boa comunicação
+            </div>
+            <div>
+                <input type="checkbox" id="flexibilidade" name="Habilidades[]" value="flexibilidade">
+                <label for="flexibilidade"> </label>Flexibilidade
+            </div>
+            <div>
+                <input type="checkbox" id="liderança" name="Habilidades[]" value="liderança">
+                <label for="liderança"> </label>Liderança. 
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend> Linguagens que são um diferencial </legend> 
+            <div>
+                <input type="checkbox" id="chines" name="linguas[]" value="chines">
+                <label for="chines"> </label>Chinês
+            </div>
+            <div>
+                <input type="checkbox" id="frances" name="linguas[]" value="frances">
+                <label for="frances"> </label>Francês
+            </div>
+            <div>
+                <input type="checkbox" id="mandarin" name="linguas[]" value="mandarin">
+                <label for="mandarin"> </label>Mandarin
+            </div>
+            <div>
+                <input type="checkbox" id="alemao" name="linguas[]" value="alemao">
+                <label for="alemao"> </label>Alemão. 
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend> É necessário possuir carteira de  </legend> 
+            <div>
+                <input type="checkbox" id="carro" name="carteira[]" value="carro">
+                <label for="carro"> </label>Carro
+            </div>
+            <div>
+                <input type="checkbox" id="moto" name="carteira[]" value="moto">
+                <label for="moto"> </label>Moto
+            </div>
+            <div>
+                <input type="checkbox" id="caminhao" name="carteira[]" value="caminhao">
+                <label for="caminhao"> </label>Caminhão
+            </div>
+           
+        </fieldset>
+
+        <fieldset>
+            <legend>Bônus que a vaga oferece  </legend> 
+            <div>
+                <input type="checkbox" id="saude" name="bonus[]" value="saude">
+                <label for="saude"> </label>Plano de saúde
+            </div>
+            <div>
+                <input type="checkbox" id="dentista" name="bonus[]" value="dentista">
+                <label for="dentista"> </label>Plano dentário
+            </div>
+            <div>
+                <input type="checkbox" id="fds" name="bonus[]" value="fds">
+                <label for="fds"> </label>fim de semana livre
+            </div>
+            <div>
+                <input type="checkbox" id="horario" name="bonus[]" value="horario">
+                <label for="horario"> </label>horario flexivel
+            </div>
+           
+        </fieldset>
+        <button>Enviar</button>
+        <input type="reset" value="Limpar">
+
+    </form>
+
+    <footer>
+        <h1><a href="trabalho1.html"> Voltar pra página principal </a> </h1> 
+    </footer>
+
+
+
+</body>
+
+</html>

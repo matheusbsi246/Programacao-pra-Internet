@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Exercício 3</title>
+    <style>
+        nav button {
+            border: none;
+            outline: none;
+            padding: 0 10px;
+            background-color: inherit;
+            height: 30px;
+            margin: 0;
+        }
+
+        nav button:hover {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        button.buttonActive {
+            font-weight: bold;
+            color: blue;
+        }
+
+        .tabs section {
+            display: none;
+        }
+
+        section.tabActive {
+            display: block;
+        }
+
+        header {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 100%;
+            padding: 5px;
+            background-image: url("images/bg1ex4.jpg");
+            background-size: cover;
+        }
+
+        strong {
+            font-size: 2rem;
+            color: white;
+        }
+
+        body {
+            margin: 0%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        main {
+            line-height: 1.5rem;
+            width: 60%;
+            margin: auto;
+
+        }
+
+        img {
+
+            border-radius: 10px;
+        }
+
+        nav {
+            padding: 1px;
+            background-image: url("images/bg2ex4.jpg");
+            background-size: cover;
+            font-size: 1.5rem;
+        }
+
+        ul {
+            text-align: center;
+        }
+
+        ul li {
+            display: inline;
+            margin: 0px 20px 0px 0px;
+        }
+
+        button {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <figure>
+            <img src="images/perfil.jpg" width="148" height="191" alt="perfil">
+            <Strong>Walter Hartwell White Sr.</Strong>
+        </figure>
+    </header>
+    <nav>
+        <ul>
+
+            <li> <button> Formação acadêmica </button> | </li>
+            <li> <button> Experiência profissional </button> | </li>
+            <li> <button> Informações pra contato </button> | </li>
+            <li> <button> Graymatters </button> </li>
+
+        </ul>
+    </nav>
+
+    <main>
+        <div class="tabs">
+            <article>
+
+                <h1> Quem sou </h1>
+                <p> Um dos fundadores da empresa <i>Gray Matter Technologies</i> 
+                    Possuo grande visão de negócio, experiência em manuseio de compostos químicos com segurança e
+                    competência pra
+                    extrair,
+                    da melhor forma,
+                    e obter um produto com uma pureza ideal. Também tenho grande experiência na área de educação,
+                    lecionando química de uma maneira simples e objetiva. Pra mim, quimíca se trata de uma arte e o medo
+                    é o
+                    nosso
+                    pior inimigo.
+                </p>
+            </article>
+
+            <section>
+                <h1> Formação Acadêmica</h1>
+
+                <b><i>California Institute of Technologies </i> </b>
+                1975-1980 <br>
+                <ol>
+                    <li>Graduação em licenciatura em Química. </li>
+                </ol>
+
+            </section>
+
+
+            <section>
+                <h1> Expêriencia Profissional </h1>
+                <ol>
+                    <li>
+                        <article>
+                            <h3> <i>Gray Matter Tecnologies</i> 1980 - 1985 </h3>
+                            Um dos fundores e realizava pesquisas na empresa.
+                        </article>
+                    </li>
+
+                    <li>
+                        <article>
+                            <h3> <i> Sadia Laboratories </i> 1986 - 1990 </h3>
+                            Atuei como químico de laboratório no manuseio de gases em geral.
+                        </article>
+                    </li>
+
+                    <li>
+                        <article>
+                            <h3> <i>J. P. Wynne High School</i> 1990 - Atualmente </h3>
+                            Atuo como professior de Química para alunos do ensino médio
+                        </article>
+                    </li>
+
+                </ol>
+            </section>
+
+            <section>
+                <h1> Informações pra contato </h1>
+                <address>
+                    308 Negra Arroyo Lane, <br> Albuquerque, New Mexico, 87104
+                </address>
+                <div> <a href="tel:034-99999-9999">
+                        Tel: 034 99999-9999
+                    </a></div>
+                <div> <a href="mailto:WhalterWhite@jorgmail.com">
+                        Email: WhalterWhite@jorgmail.com
+                    </a></div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.222768769444!2d-106.53875268475635!3d35.12611398032744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87227557938908eb%3A0x723dd3cf63dbb051!2s3828%20Piermont%20Dr%20NE%2C%20Albuquerque%2C%20NM%2087111%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1604186243244!5m2!1spt-BR!2sbr"
+                    width="400" height="300" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </section>
+
+
+
+
+
+            <section>
+                <h1 id="graymatter"> <i>Gray Matter Technologies</i></h1>
+
+                Uma empresa multi bilionária, na qual, eu fui cofundador junto com Elliot Schwartz. O nome da empresa
+                foi a
+                combinação
+                dos nossos 2 nomes, Schwatz significa Preto em alemão e White branco em inglês, juntando os 2, temos
+                cinza,
+                de <i>Gray Matter</i>, em 2008 a compania recebeu o prêmio Nobel pelo seu trabalho de trocas de
+                moléculas, no qual eu tive grande influência.
+            </section>
+        </div>
+
+    </main>
+    <script>
+
+        window.onload = function () {/* onload é uma propriedade de tratamento de evento do objeto window, a função que vem em seguida 
+        se iniciará automaticamente quando houver o evento load, ou seja, quando a página estiver com todos os recursos carregados. */ 
+            buttons = document.querySelectorAll("nav button"); //seleciona todos os botões da barra de navegação
+            for (let button of buttons) { // aciona um evento pra variavel button 
+                button.addEventListener("click", changeTab); // após clicar em um button do painel de navegação ocorre a função changeTab
+            }
+            openTab(0);//encontra a posição do li que está dentro da lista
+        }
+        function changeTab(e) {// essa função será chamada quando o usuário clicar em algum botão da tabela de navegação. 
+            const botaoAcionado = e.target; //O Paramentro 'e' vai ter as informações sobre o evento e do objeto que acionou o botão do evento. 
+            const liDoBotao = botaoAcionado.parentNode; //a variavel liDoBotão vai receber o nó "pai" da lista 
+            const nodes = Array.from(liDoBotao.parentNode.children);//a variavel nodes vai receber todos os nós filhos do nó pai do liDoBotao
+            //o Array.from é pra transferir esse lista em um vetor.
+            const index = nodes.indexOf(liDoBotao);// a variavel index irá receber o valor da posição de um li especifico 
+            //fornecido pela função infexof 
+            openTab(index);//a função open tab vai tornar visivel o section do botão especifico. 
+        }
+
+        function openTab(i) {
+            const tabActive = document.querySelector(".tabActive"); // a section que está visivel vai ficar invisivel 
+            if (tabActive !== null)
+                tabActive.className = "";
+
+            const buttonActive = document.querySelector(".buttonActive");// o botão que está ativo vai ficar inativo
+            if (buttonActive !== null)
+                buttonActive.className = "";
+
+            document.querySelectorAll(".tabs section")[i].className = "tabActive";//volta a visibilidade da section
+            document.querySelectorAll("nav button")[i].className = "buttonActive";// o botão volta a estar ativo
+        }
+    </script>
+</body>
+
+</html>

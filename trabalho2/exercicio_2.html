@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Curriculum Vitae do Químico Walter Hartwell White Sr. cujo está procurando um emprego na área de manuseio de compostos quimícos afim de obter um produto com a mais pureza possível">
+    <title> Exercicio 2 </title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        .loginBox {
+            font-size: 1.5rem;
+            padding: 20px;
+            font-family: Geogia;
+            width: 50%;
+            background-color: white;
+            border: 0.8px solid #aaa;
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input {
+            display: block;
+            margin: 8px 0 15px;
+            padding: 8px;
+            width: 90%;
+            border: 0.5px solid #888;
+            border-radius: 4px;
+        }
+
+        input:focus {
+            border: 0.5px solid rgb(64, 18, 94);
+            box-shadow: 0px 0px 5px rgb(118, 26, 172);
+            outline: none;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <div class="loginBox">
+            <form action="Login.php" method="post">
+
+                <div>
+                    <label for="user">Usuário:</label>
+                    <input type="text" id="user" name="user" required>
+                </div>
+                <div>
+                    <label for="pswd">Senha:</label>
+                    <input type="password" id="pswd" name="pswd" required>
+                </div>
+                
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
+    </main>
+</body>
+
+
+</html>

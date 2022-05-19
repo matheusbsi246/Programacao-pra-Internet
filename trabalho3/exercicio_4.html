@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <title> Exercicio 4 </title>
+    <style>
+        body {
+            background-image: url("images/background.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            margin: 0;
+            font-family: 'Helvetica Neue';
+        }
+
+        .loginBox {
+            font-size: 1.5rem;
+            padding: 20px;
+            font-family: Geogia;
+            width: 50%;
+            background-color: white;
+            border: 0.8px solid #aaa;
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input {
+            display: block;
+            margin: 8px 0 15px;
+            padding: 8px;
+            width: 90%;
+            border: 0.5px solid #888;
+            border-radius: 4px;
+        }
+
+        input:focus {
+            border: 0.5px solid rgb(64, 18, 94);
+            box-shadow: 0px 0px 5px rgb(118, 26, 172);
+            outline: none;
+        }
+        span{
+            color:red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <div class="loginBox">
+            <h3>Cadastro de Usuário</h3>
+            <form name="formCadastro" action="action.php" method="post">
+
+                <div>
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" id="usuario" name="usuario" >
+                    <span></span>
+                </div>
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" >
+                    <span></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" >
+                    <span></span>
+                </div>
+                
+
+
+                <button>Cadastrar</button>
+            </form>
+        </div>
+
+    </main>
+    <script>
+        window.onload = function () {/* onload é uma propriedade de tratamento de evento do objeto window, a função que vem em seguida 
+        se iniciará automaticamente quando houver o evento load, ou seja, quando a página estiver com todos os recursos carregados. */ 
+            document.forms.formCadastro.onsubmit = validaForm; //quando o formulario for enviado ele irá chamar a função validaForm
+           
+        }
+        function validaForm (e) { //  a funcao validaForm irá garantir que só enviará o formulario se o formValido tiver o valor = true
+            let form = e.target; // da acesso ao objeto do formulario
+            let formValido = true;
+        
+        const spanUsuario = form.usuario.nextElementSibling; //acesso ao objeto usuario
+        const spanSenha = form.senha.nextElementSibling; // acesso ao objeto senha
+        const spanEmail = form.email.nextElementSibling;// acesso ao objeto email
+
+        if (form.usuario.value === "") { //verifica se o usuario está vazio
+            spanUsuario.textContent = 'O usuário deve ser preenchido';
+            formValido = false;
+        }
+        if (form.senha.value === "") { //verifica se a senha está vazio
+            spanSenha.textContent = 'A senha deve ser preenchida';
+            formValido = false;
+        }
+
+        if (form.email.value === "") { //verifica se o email está vazio
+            spanEmail.textContent = 'O email deve ser preenchido';
+            formValido = false; 
+        }
+        return formValido; // se todos estiverem preenchido corretamente ele retorna Valido que recebe o valor True e envia
+        }
+    </script>
+</body>
+
+
+</html>

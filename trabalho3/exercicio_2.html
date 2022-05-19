@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Exercicio 2 </title>
+    <style>
+        body {
+            background-color: white;
+        }
+     
+        main {
+
+            font-size: 1.5rem;
+            padding: 20px 70px 30px 70px;
+            font-family: Geogia;
+            width: auto;
+            background-color: rgb(226, 226, 226);
+            border: 0.8px solid #aaa;
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input {
+            margin: 8px 0 15px;
+            padding: 8px;
+            width: 60%;
+            height: 0.5rem;
+            border: 0.5px solid #888;
+            border-radius: 4px;
+        }
+
+        li {
+            width: 230px;
+            padding: 5px 10px 5px 20px;
+            margin: 3px;
+            background-color: rgb(189, 217, 240);
+            border: 0.5px solid rgb(70, 67, 240);
+            border-radius: 3px;
+        }
+        li > button {
+            font-size: smaller;
+            float: right;
+            color: red;
+            border: none;
+            background-color: rgb(189, 217, 240);
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        
+
+                <div>
+                    <label for="interesse">Interesse:</label>
+                    <input type="text" id="interesse" name="interesse">
+                    
+                   
+                </div>
+                <ol>
+                </ol>
+                
+
+
+    </main>
+    <script>
+        window.onload = function() {/* onload é uma propriedade de tratamento de evento do objeto window, a função que vem em seguida 
+        se iniciará automaticamente quando houver o evento load, ou seja, quando a página estiver com todos os recursos carregados. */ 
+            const campoInteresse = document.querySelector("#interesse");//a variavel "campoInteresse" recebe o elemento, pelo id, do documento interesse 
+            campoInteresse.addEventListener("keyup", e => {//ocorre um evento de keyboard que aciona um função
+                if (e.key === "Enter") // se o usuario apertar "Enter" ocorre a funçãio abaixo
+                adicionaInteresse(); 
+            });
+        }
+
+        function adicionaInteresse() { 
+
+            const campoInteresse = document.querySelector("#interesse"); // a variavel "campoInteresse" recebe o elemento, pelo id, do documento 
+            const listaInteresse = document.querySelector("ol");//a variavel listaInteresse recebe o valor do primeiro elemento ol
+
+            const novoLi = document.createElement("li"); //a constante novoLi recebe um novo elemento li 
+            const novoSpan = document.createElement("span"); // a constante recebe um novo elemento span 
+            const novoBotao = document.createElement("button");// a constante novoBotao recebe um novo elemento button
+
+            novoSpan.textContent = campoInteresse.value; // o novoSpan recebe o valor da variavel campoInteresse 
+            novoBotao.textContent = '✖'; // o novoBotao recebe o valor "✖"
+
+            novoLi.appendChild(novoSpan);//acrescenta o novoSpan como filho do li
+            novoLi.appendChild(novoBotao);//acrescenta o novoBotao como filho do li  
+            listaInteresse.appendChild(novoLi);//após tudo isso, o li é finalmente adcionado a lista
+
+            novoBotao.onclick = function () { //adiona uma função ao evento "click" do botão 
+                listaInteresse.removeChild(novoLi); // a função remove o li cirado pelo usuario da lista 
+            }
+            campoInteresse.value = '';
+        }
+    </script>
+</body>
+
+
+</html>
